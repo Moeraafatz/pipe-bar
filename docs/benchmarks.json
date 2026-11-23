@@ -1,0 +1,62 @@
+{
+  "generatedAtISO8601" : "2026-11-23T21:48:37Z",
+  "hostArchitecture" : "Apple Silicon (arm64)",
+  "osVersion" : "Version 26.7.2 (Build 25G332)",
+  "parserAutocompleteAvgMs" : 0.12806987762451172,
+  "pdfKitExtractVerified" : true,
+  "scalePoints" : [
+    {
+      "rowCount" : 1000,
+      "rowsPerSecond" : 62386.9226020928,
+      "totalDurationMs" : 16.029000282287598
+    },
+    {
+      "rowCount" : 5000,
+      "rowsPerSecond" : 71935.32121578003,
+      "totalDurationMs" : 69.50688362121582
+    },
+    {
+      "rowCount" : 10000,
+      "rowsPerSecond" : 90670.01016018505,
+      "totalDurationMs" : 110.2900505065918
+    },
+    {
+      "rowCount" : 25000,
+      "rowsPerSecond" : 80692.55900768813,
+      "totalDurationMs" : 309.817910194397
+    }
+  ],
+  "visionOCRVerified" : true,
+  "workflowBenchmarks" : [
+    {
+      "commandSummary" : "tabs | clean urls | dedupe | to markdown | copy",
+      "durationMs" : 11.427998542785645,
+      "label" : "500 Tabs Cleaner",
+      "manualClicksReplaced" : 34
+    },
+    {
+      "commandSummary" : "clip | filter ERROR | redact | summarize",
+      "durationMs" : 18.56207847595215,
+      "label" : "10K Log Scrubber",
+      "manualClicksReplaced" : 18
+    },
+    {
+      "commandSummary" : "selected pdfs | pdf text | tables | merge csv",
+      "durationMs" : 5.212068557739258,
+      "label" : "PDFKit Table Merge",
+      "manualClicksReplaced" : 22
+    },
+    {
+      "commandSummary" : "clip | extract tables | to json | copy",
+      "durationMs" : 68.67897510528564,
+      "label" : "5K CSV → JSON",
+      "manualClicksReplaced" : 15
+    },
+    {
+      "commandSummary" : "selected images | ocr | extract urls | md",
+      "durationMs" : 1952.6209831237793,
+      "label" : "Vision OCR → Links",
+      "manualClicksReplaced" : 14
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0C0A16"/>
+      <stop offset="100%" stop-color="#05040B"/>
+    </linearGradient>
+    <linearGradient id="violetBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#251335"/>
+      <stop offset="100%" stop-color="#140A1E"/>
+    </linearGradient>
+    <linearGradient id="cyanBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102230"/>
+      <stop offset="100%" stop-color="#09151E"/>
+    </linearGradient>
+    <linearGradient id="greenBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10291B"/>
+      <stop offset="100%" stop-color="#091810"/>
+    </linearGradient>
+    <marker id="arrowViolet" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#BF5AF2"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#30D158"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="390" rx="20" fill="url(#bg)" stroke="#FFFFFF" stroke-opacity="0.14"/>
+
+  <text x="40" y="48" fill="#BF5AF2" font-family="-apple-system, BlinkMacSystemFont, SF Pro Display, Helvetica" font-size="13" font-weight="700" letter-spacing="1.4">TYPED UNIX-STYLE GUI PIPELINE ARCHITECTURE · 100% NATIVE SWIFT 6</text>
+  <text x="40" y="78" fill="#F5F8FC" font-family="-apple-system, BlinkMacSystemFont, SF Pro Display, Helvetica" font-size="24" font-weight="700">Pipe Bar Engine — Compose Live macOS Apps, PDFs, Vision &amp; Data</text>
+
+  <!-- Node 1 -->
+  <rect x="40" y="120" width="190" height="125" rx="14" fill="url(#violetBox)" stroke="#BF5AF2" stroke-opacity="0.6"/>
+  <text x="58" y="150" fill="#BF5AF2" font-family="SF Mono, Menlo, monospace" font-size="12" font-weight="700">1. GUI SOURCES</text>
+  <text x="58" y="176" fill="#FFFFFF" font-family="-apple-system, Helvetica" font-size="15" font-weight="700">Finder · Tabs · Clip</text>
+  <text x="58" y="200" fill="#64D2FF" font-family="SF Mono, Menlo, monospace" font-size="12.5" font-weight="700">selected | tabs | clip</text>
+  <text x="58" y="228" fill="#9AA8BC" font-family="-apple-system, Helvetica" font-size="12">AppleEvents + Pasteboard</text>
+
+  <line x1="230" y1="182" x2="262" y2="182" stroke="#BF5AF2" stroke-width="2.2" marker-end="url(#arrowViolet)"/>
+
+  <!-- Node 2 -->
+  <rect x="270" y="120" width="190" height="125" rx="14" fill="url(#cyanBox)" stroke="#64D2FF" stroke-opacity="0.55"/>
+  <text x="288" y="150" fill="#64D2FF" font-family="SF Mono, Menlo, monospace" font-size="12" font-weight="700">2. PIPE PARSER</text>
+  <text x="288" y="176" fill="#FFFFFF" font-family="-apple-system, Helvetica" font-size="15" font-weight="700">Lexer + Autocomplete</text>
+  <text x="288" y="204" fill="#64D2FF" font-family="SF Mono, Menlo, monospace" font-size="13" font-weight="700">~0.128 ms / keystroke</text>
+  <text x="288" y="228" fill="#9AA8BC" font-family="-apple-system, Helvetica" font-size="12">Quoted args + aliases</text>
+
+  <line x1="460" y1="182" x2="492" y2="182" stroke="#BF5AF2" stroke-width="2.2" marker-end="url(#arrowViolet)"/>
+
+  <!-- Node 3 -->
+  <rect x="500" y="120" width="195" height="125" rx="14" fill="url(#cyanBox)" stroke="#BF5AF2" stroke-opacity="0.55"/>
+  <text x="518" y="150" fill="#D58CFF" font-family="SF Mono, Menlo, monospace" font-size="12" font-weight="700">3. MEDIA EXTRACT</text>
+  <text x="518" y="176" fill="#FFFFFF" font-family="-apple-system, Helvetica" font-size="15" font-weight="700">PDFKit + Vision OCR</text>
+  <text x="518" y="204" fill="#30D158" font-family="SF Mono, Menlo, monospace" font-size="13" font-weight="700">100% Offline ANE</text>
+  <text x="518" y="228" fill="#9AA8BC" font-family="-apple-system, Helvetica" font-size="12">Tables, URLs, Emails</text>
+
+  <line x1="695" y1="182" x2="727" y2="182" stroke="#BF5AF2" stroke-width="2.2" marker-end="url(#arrowViolet)"/>
+
+  <!-- Node 4 -->
+  <rect x="735" y="120" width="195" height="125" rx="14" fill="url(#cyanBox)" stroke="#FF9F0A" stroke-opacity="0.55"/>
+  <text x="753" y="150" fill="#FF9F0A" font-family="SF Mono, Menlo, monospace" font-size="12" font-weight="700">4. TYPED ENGINE</text>
+  <text x="753" y="176" fill="#FFFFFF" font-family="-apple-system, Helvetica" font-size="15" font-weight="700">Filter · Dedupe · Scrub</text>
+  <text x="753" y="204" fill="#FF9F0A" font-family="SF Mono, Menlo, monospace" font-size="13" font-weight="700">81K/s rows/sec</text>
+  <text x="753" y="228" fill="#9AA8BC" font-family="-apple-system, Helvetica" font-size="12">CSV · Markdown · JSON</text>
+
+  <line x1="930" y1="182" x2="962" y2="182" stroke="#30D158" stroke-width="2.2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Node 5 -->
+  <rect x="970" y="120" width="190" height="125" rx="14" fill="url(#greenBox)" stroke="#30D158" stroke-opacity="0.65"/>
+  <text x="988" y="150" fill="#30D158" font-family="SF Mono, Menlo, monospace" font-size="12" font-weight="700">5. OUTPUT SINKS</text>
+  <text x="988" y="176" fill="#FFFFFF" font-family="-apple-system, Helvetica" font-size="15" font-weight="700">Copy · Save · Note</text>
+  <text x="988" y="204" fill="#30D158" font-family="SF Mono, Menlo, monospace" font-size="13" font-weight="700">⌥⇧P Floating HUD</text>
+  <text x="988" y="228" fill="#9AA8BC" font-family="-apple-system, Helvetica" font-size="12">Auto-redacts secrets</text>
+
+  <!-- Bottom guarantee strip -->
+  <rect x="40" y="286" width="1120" height="64" rx="12" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <text x="66" y="324" fill="#BF5AF2" font-family="SF Mono, Menlo, monospace" font-size="14" font-weight="700">✓ 24 COMPOSABLE STAGES</text>
+  <text x="332" y="324" fill="#64D2FF" font-family="SF Mono, Menlo, monospace" font-size="14" font-weight="700">✓ PDFKIT + VISION OFFLINE</text>
+  <text x="635" y="324" fill="#30D158" font-family="SF Mono, Menlo, monospace" font-size="14" font-weight="700">✓ SANDBOXED LOCAL PLUGINS</text>
+  <text x="955" y="324" fill="#E5ECF4" font-family="SF Mono, Menlo, monospace" font-size="14" font-weight="700">✓ MIT LICENSE</text>
+</svg>
