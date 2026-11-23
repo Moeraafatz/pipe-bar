@@ -58,9 +58,10 @@ struct PipeBarToolsMain {
 
         var wfRows = ""
         for wf in report.workflowBenchmarks {
+            let escapedCmd = wf.commandSummary.replacingOccurrences(of: "|", with: "\\|")
             wfRows += String(
                 format: "| %@ | `%@` | **%.2f ms** | %d → 1 |\n",
-                wf.label, wf.commandSummary, wf.durationMs, wf.manualClicksReplaced
+                wf.label, escapedCmd, wf.durationMs, wf.manualClicksReplaced
             )
         }
 

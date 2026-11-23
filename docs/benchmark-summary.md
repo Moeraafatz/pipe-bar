@@ -16,8 +16,8 @@
 
 | Workflow | Pipeline Command | Measured Time | Manual Clicks |
 | :--- | :--- | ---: | ---: |
-| 500 Tabs Cleaner | `tabs | clean urls | dedupe | to markdown | copy` | **11.43 ms** | 34 → 1 |
-| 10K Log Scrubber | `clip | filter ERROR | redact | summarize` | **18.56 ms** | 18 → 1 |
-| PDFKit Table Merge | `selected pdfs | pdf text | tables | merge csv` | **5.21 ms** | 22 → 1 |
-| 5K CSV → JSON | `clip | extract tables | to json | copy` | **68.68 ms** | 15 → 1 |
-| Vision OCR → Links | `selected images | ocr | extract urls | md` | **1952.62 ms** | 14 → 1 |
+| 500 Tabs Cleaner | `tabs \| clean urls \| dedupe \| to markdown \| copy` | **11.43 ms** | 34 → 1 |
+| 10K Log Scrubber | `clip \| filter ERROR \| redact \| summarize` | **18.56 ms** | 18 → 1 |
+| PDFKit Table Merge | `selected pdfs \| pdf text \| tables \| merge csv` | **5.21 ms** | 22 → 1 |
+| 5K CSV → JSON | `clip \| extract tables \| to json \| copy` | **68.68 ms** | 15 → 1 |
+| Vision OCR → Links | `selected images \| ocr \| extract urls \| md` | **1952.62 ms** | 14 → 1 |

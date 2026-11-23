@@ -6,7 +6,7 @@
 
 **Universal Unix-style GUI pipeline bar for macOS — chain Finder selections, browser tabs, PDFs, Vision OCR, clipboard & local scripts like shell pipes.**
 
-Built in pure **Swift 6** for Apple Silicon (macOS 15+).  
+Built in pure **Swift 6** for Apple Silicon (macOS 15+) in a **1.9 MB** native menu bar app.  
 **24 composable stages. Zero cloud. Zero subscriptions. Zero third-party dependencies.**
 
 [![Download Latest](https://img.shields.io/badge/Download-PipeBar--1.0.0.dmg-BF5AF2?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/Moeraafatz/pipe-bar/releases/latest)
@@ -43,6 +43,7 @@ selected images | ocr | extract urls | clean urls | open
 | | **Pipe Bar** | Raycast / Alfred | Apple Shortcuts | Manual App Switching |
 | :--- | :---: | :---: | :---: | :---: |
 | **Price** | **Free & Open Source (MIT)** | $8–$10/mo / Paid Powerpack | Free | Free (costs hours/wk) |
+| **App Installer Size** | **1.9 MB DMG (2.0 MB .app)** | 80–250 MB | Built-in | N/A |
 | **Composable Typed Pipes (`a \| b \| c`)** | ✅ Live per-stage traces & types | ❌ Single-step commands | ⚠️ Clunky drag blocks | ❌ |
 | **Native `PDFKit` + `Vision` OCR Stages** | ✅ Offline Apple Silicon | ⚠️ Extensions / Paid | ⚠️ Slow | ❌ Separate apps |
 | **Live Browser Tabs + Finder Adapters** | ✅ Safari, Chrome, Arc, Finder | ⚠️ Separate plugins | ⚠️ Fragile | Manual copy-paste |
@@ -92,7 +93,7 @@ Every screenshot below is rendered directly from the compiled SwiftUI `PipeBarUI
 </p>
 
 1. **Live macOS GUI Sources (`MacAdapters`)** — Pulls `NSPasteboard` clipboard, Finder selections (`selected pdfs`, `selected images`), and active Safari/Chrome/Arc tabs cleanly into typed `PipePayload` values.
-2. **Sub-Millisecond Lexer & Autocomplete (`PipelineParser`)** — Splits unquoted pipes, preserves quoted patterns (`filter "error | fatal"`), resolves terse aliases (`clip`, `md`, `uniq`, `pbcopy`), and ranks autocomplete suggestions per keystroke.
+2. **Sub-Millisecond Lexer & Autocomplete (`PipelineParser`)** — Splits unquoted pipes, preserves quoted patterns (`filter "error | fatal"`), resolves terse aliases (`clip`, `md`, `uniq`, `pbcopy`), and ranks autocomplete suggestions per keystroke (`0.128 ms`).
 3. **Offline Media & Data Transforms (`DataTransformers`)** — Runs Apple `PDFKit`, Apple `Vision` OCR, RFC-4180 CSV/TSV/Markdown table parsers, URL tracker stripping (`utm_*`, `fbclid`, `gclid`, `si`), secret redaction, JSON pretty-printing, and local extractive summaries.
 4. **Typed Stage Tracer (`PipelineEngine`)** — Executes every stage synchronously on typed payloads (`TEXT`, `LINES`, `TABLE`, `TABS`, `FILES`, `JSON`) while recording exact input/output counts and millisecond latency per hop.
 5. **Safe Output Sinks + Local SQLite Library (`RecipeStore`)** — Outputs to clipboard (with optional auto-secret redaction), files, timestamped Markdown notes, or macOS default apps.
@@ -137,11 +138,11 @@ All graphs and numbers below are **measured live on Apple Silicon CI** via `Pipe
 
 | Workflow | Pipeline Command | Measured Time | Manual Clicks |
 | :--- | :--- | ---: | ---: |
-| 500 Tabs Cleaner | `tabs | clean urls | dedupe | to markdown | copy` | **11.43 ms** | 34 → 1 |
-| 10K Log Scrubber | `clip | filter ERROR | redact | summarize` | **18.56 ms** | 18 → 1 |
-| PDFKit Table Merge | `selected pdfs | pdf text | tables | merge csv` | **5.21 ms** | 22 → 1 |
-| 5K CSV → JSON | `clip | extract tables | to json | copy` | **68.68 ms** | 15 → 1 |
-| Vision OCR → Links | `selected images | ocr | extract urls | md` | **1952.62 ms** | 14 → 1 |
+| 500 Tabs Cleaner | `tabs \| clean urls \| dedupe \| to markdown \| copy` | **11.43 ms** | 34 → 1 |
+| 10K Log Scrubber | `clip \| filter ERROR \| redact \| summarize` | **18.56 ms** | 18 → 1 |
+| PDFKit Table Merge | `selected pdfs \| pdf text \| tables \| merge csv` | **5.21 ms** | 22 → 1 |
+| 5K CSV → JSON | `clip \| extract tables \| to json \| copy` | **68.68 ms** | 15 → 1 |
+| Vision OCR → Links | `selected images \| ocr \| extract urls \| md` | **1952.62 ms** | 14 → 1 |
 <!-- BENCHMARK_TABLE_END -->
 
 ---
